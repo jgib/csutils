@@ -1,0 +1,10 @@
+C:\Users\jason\source\repos\csutils\csutils\csutils\bin\Debug\csutils.exe.config
+C:\Users\jason\source\repos\csutils\csutils\csutils\bin\Debug\csutils.exe
+C:\Users\jason\source\repos\csutils\csutils\csutils\bin\Debug\csutils.pdb
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.csproj.AssemblyReference.cache
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.Form1.resources
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.Properties.Resources.resources
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.csproj.GenerateResource.cache
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.exe
+C:\Users\jason\source\repos\csutils\csutils\csutils\obj\Debug\csutils.pdb
