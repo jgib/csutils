@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace csutils.Properties
+namespace utils.Properties
 {
 
 
