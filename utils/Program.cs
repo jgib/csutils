@@ -25,6 +25,8 @@ namespace utils
         private static bool showInTaskbar = true;
         private static string formTitle = "Debug Output";
         private static Font textFont = formFont;
+        private static Color textForeColor = Color.LightGreen;
+        private static Color textBackColor = Color.Black;
         private static Form verboseForm = new Form();
         private static TextBox textBox = new TextBox();
 
@@ -36,6 +38,16 @@ namespace utils
 
         [DllImport("User32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("User32.dll")]
+        public static extern bool HideCaret(IntPtr hWnd);
+        public static void TextColor(Color foreColor, Color backColor)
+        {
+            if (!_initialized)
+            {
+                textForeColor = foreColor;
+                textBackColor = backColor;
+            }
+        }
         public static void ShowInTaskbar(bool show)
         {
             if (!_initialized)
@@ -86,7 +98,7 @@ namespace utils
                 {
                     throw new ArgumentException($"invalid width [{width}]");
                 }
-                if (height < 24)
+                if (height < 63)
                 {
                     throw new ArgumentException($"invalid height [{height}]");
                 }
@@ -177,7 +189,8 @@ namespace utils
                 closeButton.Click += new EventHandler(Close_Click);
 
                 textBox.ReadOnly = true;
-                textBox.BackColor = verboseForm.BackColor;
+                textBox.BackColor = textBackColor;
+                textBox.ForeColor = textForeColor;
                 textBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
                 textBox.BorderStyle = BorderStyle.None;
                 textBox.Font = textFont;
@@ -186,8 +199,10 @@ namespace utils
                 textBox.WordWrap = true;
                 textBox.ScrollBars = ScrollBars.Vertical;
                 textBox.Location = new Point(0, 24);
-                textBox.Width = verboseForm.Width;
-                textBox.Height = verboseForm.Height - 24;
+                textBox.Width = verboseForm.Width - 20;
+                textBox.Height = verboseForm.Height - 63;
+                textBox.SendToBack();
+                textBox.GotFocus += new EventHandler(TextBox_GotFocus);
                 //textBox.MouseDown += new MouseEventHandler(TextBox_MouseDown);
 
                 verboseForm.Controls.Add(minimizeButton);
@@ -196,14 +211,14 @@ namespace utils
                 verboseForm.Controls.Add(textBox);
 
                 verboseForm.Show();
+                //TextBox_GotFocus(textBox, new EventArgs());
                 //verboseForm.SendToBack();
             }
         }
         
         private static void VerboseForm_Load(object sender, EventArgs e)
         {
-            Form verboseForm = sender as Form;
-            
+           
         }
         private static void VerboseForm_MouseDown(object sender, MouseEventArgs e)
         {
@@ -223,6 +238,11 @@ namespace utils
                 ReleaseCapture();
                 SendMessage(verboseForm.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
+        }
+        private static void TextBox_GotFocus(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            HideCaret(textBox.Handle);
         }
         private static void Minimize_Click(object sender, EventArgs e)
         {
@@ -248,7 +268,6 @@ namespace utils
 
             verboseForm.Invalidate(true);
         }
-
         private static void Close_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
