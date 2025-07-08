@@ -41,6 +41,10 @@ namespace utils
         {
             if (_initialized) 
             {
+                if (input.Length > textBox.MaxLength)
+                {
+                    throw new ArgumentException($"input length [{input.Length}] exceeds maximum length for textbox control [{textBox.MaxLength}]");
+                }
                 textBox.Text = $"{DateTime.Now.ToString("HH:mm:ss.fff")} | {filePath}:{lineNumber} | {callername} | {input}\r\n";
             }
         }
@@ -48,6 +52,14 @@ namespace utils
         {
             if (_initialized)
             {
+                if (input.Length > textBox.MaxLength)
+                {
+                    throw new ArgumentException($"input length [{input.Length}] exceeds maximum length for textbox control [{textBox.MaxLength}]");
+                }
+                if (input.Length + textBox.Text.Length > textBox.MaxLength)
+                {
+                    throw new ArgumentException($"input length [{input.Length}] in addition to current textbox control length [{textBox.Text.Length}] exceeds maximum length for textbox control [{textBox.MaxLength}]");
+                } 
                 textBox.AppendText($"{DateTime.Now.ToString("HH:mm:ss.fff")} | {filePath}:{lineNumber} | {callername} | {input}\r\n");
             }
         }
