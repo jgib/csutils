@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\users\\jasong\\code\\utils\\",
+  "WorkspaceRootPath": "U:\\users\\jasong\\code\\csutils\\utils\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|u:\\users\\jasong\\code\\utils\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|u:\\users\\jasong\\code\\csutils\\utils\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|u:\\users\\jasong\\code\\utils\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|U:\\users\\jasong\\code\\csutils\\utils\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|u:\\users\\jasong\\code\\utils\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|U:\\users\\jasong\\code\\csutils\\utils\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{467921B6-FDAC-44E1-B97A-DEBF5A60FBDD}|utils.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -36,24 +36,23 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "U:\\users\\jasong\\code\\utils\\Form1.cs",
+              "DocumentMoniker": "U:\\users\\jasong\\code\\csutils\\utils\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "U:\\users\\jasong\\code\\utils\\Form1.cs",
+              "ToolTip": "U:\\users\\jasong\\code\\csutils\\utils\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T18:20:17.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T18:20:17.767Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "U:\\users\\jasong\\code\\utils\\Program.cs",
+              "DocumentMoniker": "U:\\users\\jasong\\code\\csutils\\utils\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "U:\\users\\jasong\\code\\utils\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAnwGsAAAAoAAAAAAAAAA==",
+              "ToolTip": "U:\\users\\jasong\\code\\csutils\\utils\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAnwH8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T18:07:55.449Z",
               "EditorCaption": ""
@@ -62,13 +61,12 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "U:\\users\\jasong\\code\\utils\\Form1.cs",
+              "DocumentMoniker": "U:\\users\\jasong\\code\\csutils\\utils\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "U:\\users\\jasong\\code\\utils\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\utils\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T18:07:51.234Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-07T18:07:51.234Z"
             }
           ]
         },

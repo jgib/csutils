@@ -125,6 +125,7 @@ namespace utils
                 verboseForm.Controls.Add(textBox);
 
                 verboseForm.Show();
+                //verboseForm.SendToBack();
             }
         }
         
@@ -196,6 +197,15 @@ namespace utils
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+        }
+    }
+
+    public static class StringExt
+    {
+        public static string Truncate(this string value, int maxLength)
+        {
+            if (string.IsNullOrEmpty(value)) return value;
+            return value.Length <= maxLength ? value : value.Substring(0, maxLength);
         }
     }
 }

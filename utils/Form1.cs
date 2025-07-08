@@ -24,7 +24,7 @@ namespace utils
 
             utils.verbose.Append("t");
             utils.verbose.Clear();
-            utils.verbose.Append("test 1");
+            utils.verbose.Append("test 1".Truncate(3));
             
         }
     }
