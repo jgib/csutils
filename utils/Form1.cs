@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using debug = utils.verbose;
 
 namespace utils
 {
@@ -25,13 +27,13 @@ namespace utils
             {
                 if (arg == "-v" || arg == "--verbose")
                 {
-                    utils.verbose.CreateForm();
+                    debug.CreateForm();
                 }
             }
 
             for (int i = 0; i < 77; i++)
             {
-                utils.verbose.Append($"Test {i}");
+                debug.Append($"TESSST [{i}]");
             }
         }
     }
