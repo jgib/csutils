@@ -30,6 +30,9 @@ namespace utils
         private static Form verboseForm = new Form();
         private static TextBox textBox = new TextBox();
 
+        private static DateTime lastClick;
+        private static double doubleClickThreshold = 150;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
 
@@ -215,19 +218,33 @@ namespace utils
                 //verboseForm.SendToBack();
             }
         }
-        
         private static void VerboseForm_Load(object sender, EventArgs e)
         {
            
         }
         private static void VerboseForm_MouseDown(object sender, MouseEventArgs e)
         {
-            Form verboseForm = sender as Form;
-            if (e.Button == MouseButtons.Left)
+            if ((DateTime.Now - lastClick).TotalMilliseconds < doubleClickThreshold)
             {
-                ReleaseCapture();
-                SendMessage(verboseForm.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+                Form verboseForm = sender as Form;
+                if (verboseForm.WindowState == FormWindowState.Maximized)
+                {
+                    verboseForm.WindowState = FormWindowState.Normal;
+                } else
+                {
+                    verboseForm.WindowState = FormWindowState.Maximized;
+                }
+            } else
+            {
+                Form verboseForm = sender as Form;
+                if (e.Button == MouseButtons.Left)
+                {
+                    ReleaseCapture();
+                    SendMessage(verboseForm.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+                }
             }
+
+            lastClick = DateTime.Now;
         }
         private static void TextBox_MouseDown(object sender, MouseEventArgs e)
         {
