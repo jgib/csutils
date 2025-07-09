@@ -31,9 +31,9 @@ namespace utils
                 }
             }
 
-            for (int i = 0; i < 77; i++)
+            for (int i = 0; i < 7; i++)
             {
-                debug.Append($"TESSST [{i}]");
+                debug.Append($"TEST [{i}]");
             }
         }
     }
