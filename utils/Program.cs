@@ -164,6 +164,7 @@ namespace utils
                 Label titleLabel = new Label();
                 titleLabel.Text = formTitle;
                 titleLabel.Location = new Point(0, 0);
+                titleLabel.MouseDown += new MouseEventHandler(TitleLabel_MouseDown);
 
                 Button minimizeButton = new Button();
                 minimizeButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -250,6 +251,16 @@ namespace utils
             }
 
             lastClick = DateTime.Now;
+        }
+        private static void TitleLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            Label titleLabel = sender as Label;
+            Form verboseForm = titleLabel.Parent as Form;
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(verboseForm.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
         private static void TextBox_MouseDown(object sender, MouseEventArgs e)
         {

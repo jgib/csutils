@@ -27,9 +27,6 @@ namespace utils
             {
                 if (arg == "-v" || arg == "--verbose")
                 {
-                    debug.Title("Test Form");
-                    debug.TextColor(Color.White, Color.Black);
-                    debug.Size(1500, 250);
                     debug.CreateForm();
                 }
             }
