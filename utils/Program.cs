@@ -161,6 +161,10 @@ namespace utils
                 verboseForm.Load += new EventHandler(VerboseForm_Load);
                 verboseForm.MouseDown += new MouseEventHandler(VerboseForm_MouseDown);
 
+                Label titleLabel = new Label();
+                titleLabel.Text = formTitle;
+                titleLabel.Location = new Point(0, 0);
+
                 Button minimizeButton = new Button();
                 minimizeButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 minimizeButton.Width = 23;
@@ -211,6 +215,7 @@ namespace utils
                 verboseForm.Controls.Add(minimizeButton);
                 verboseForm.Controls.Add(maximizeButton);
                 verboseForm.Controls.Add(closeButton);
+                verboseForm.Controls.Add(titleLabel);
                 verboseForm.Controls.Add(textBox);
 
                 verboseForm.Show();
