@@ -6,6 +6,27 @@ A class that allows for the logging of text to a sperate WPF form.
 
 ![Verbose Example](screenshot1.png)
 
+Example:
+
+```cs
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string[] args = Environment.GetCommandLineArgs();
+            foreach (string arg in args)
+            {
+                if (arg == "-v" || arg == "--verbose")
+                {
+                    debug.CreateForm();
+                }
+            }
+
+            for (int i = 0; i < 7; i++)
+            {
+                debug.Append($"TEST [{i}]");
+            }
+        }
+```
+
 #### Methods
 
 ##### CreateForm
